@@ -20,7 +20,7 @@ class IMU_DB:
         self.conn.commit()
 
     def insert_data(self, timestamp, acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z):
-        self.cursor.execute("INSERT INTO imu_data VALUES (?, ?, ?, ?, ?, ?, ?)", (timestamp, acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z))
+        self.cursor.execute("INSERT INTO imu_data VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (timestamp, acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z))
         self.conn.commit()
 
     def get_all_data(self):
